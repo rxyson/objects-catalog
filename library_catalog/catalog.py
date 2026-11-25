@@ -34,6 +34,25 @@ class Catalog:
             del self._items[item_id]
  
     def __iter__(self) -> Iterator[Book]:
+        """Перебирает книги в порядке их добавления в каталог."""
         return iter(self._items.values())
 
-    
+    def find_by_category(self, category: str) -> list[Book]:
+        """Возвращает книги по указанной категории."""
+        result = []
+        for book in self._items.values():
+            if book.category == category:
+                result.append(book)
+        return result
+
+    def find_by_name(self, title: str) -> list[Book]:
+        """Возвращает книги по указанному слову."""
+        result = []
+        for book in self._items.values():
+            if title.lower() in book.title.lower():
+                result.append(book)
+        return result
+
+    def clear(self) -> None:
+        """Очищает каталог."""
+        self._items.clear()
