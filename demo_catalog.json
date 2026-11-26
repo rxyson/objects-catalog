@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "items": [
+    {
+      "item_id": "b1",
+      "title": "Война и мир",
+      "category": "Роман",
+      "year": 1869,
+      "author": "Л.Н. Толстой",
+      "pages": 1300
+    },
+    {
+      "item_id": "b3",
+      "title": "Евгений Онегин",
+      "category": "Роман",
+      "year": 1833,
+      "author": "А.С. Пушкин",
+      "pages": 400
+    },
+    {
+      "item_id": "b4",
+      "title": "Мир Полудня",
+      "category": "Фантастика",
+      "year": 1962,
+      "author": "Стругацкие",
+      "pages": 300
+    }
+  ]
+}

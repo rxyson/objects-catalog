@@ -10,6 +10,7 @@ FORMAT_VERSION = 1
 
 def save_catalog(catalog: Catalog, path: str) -> None:
     """Сохраняет каталог в JSON-файл."""
+
     items = [asdict(book) for book in catalog]
     data = dict(format_version=FORMAT_VERSION, items=items)
     with open(path, "w", encoding="utf-8") as file:
@@ -18,6 +19,7 @@ def save_catalog(catalog: Catalog, path: str) -> None:
 
 def load_catalog(catalog: Catalog, path: str) -> None:
     """Загружает книги из JSON-файла в каталог."""
+    
     try:
         with open(path, encoding="utf-8") as file:
             data = json.load(file)
@@ -45,8 +47,3 @@ def load_catalog(catalog: Catalog, path: str) -> None:
     catalog.clear()
     for book in draft:
         catalog.add(book)
-
-
-def clear(self) -> None:
-    """Очищает каталог."""
-    self._items.clear()
